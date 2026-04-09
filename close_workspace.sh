@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Close all windows in the active niri workspace, then move up one workspace.
 
-export NIRI_SOCKET=/run/user/1000/niri.wayland-1.2212.sock
-
 ws_id=$(niri msg -j focused-window | jq -r '.workspace_id')
 self_id=$(niri msg -j focused-window | jq -r '.id')
 
